@@ -420,6 +420,7 @@ Hero
   height: 100vh;
   background: var(--clr-primary-10);
   position: relative;
+  margin-bottom: 70px;
 }
 
 .hero-center {
@@ -475,12 +476,19 @@ Hero
   .hero-img {
     display: block;
     margin-left: 80px;
+   
     grid-row: 1/1;
     grid-column: 6/-1;
     height: 30rem;
     width: 30rem;
   }
 }
+@media screen and (max-width: 450px) {
+  .hero-img {
+    height: 22rem;
+   width: 22rem;
+  }
+  }
 @media screen and (min-width: 1170px) {
   .hero-img {
   
@@ -946,7 +954,12 @@ About Page
   color: var(--clr-primary-5);
   margin-right: 0.25rem;
   font-size: 1rem;
-}
+}@media screen and (max-width: 450px) {
+  .about-img {
+    height: 22rem;
+   width: 22rem;
+  }
+  }
 @media screen and (min-width: 992px) {
   .about-info{
    
