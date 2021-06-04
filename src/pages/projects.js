@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import Projects from "../components/Projects"
+import Projectss from "../components/Projects"
 import SEO from "../components/SEO"
 
 const ProjectsPage = ({
@@ -13,7 +13,7 @@ const ProjectsPage = ({
     <Layout>
       <SEO title="Projects" />
       <section className="projects-page">
-        <Projects projects={Projects} title="all projects" />
+        <Projectss projects={Projects} title="all projects" />
       </section>
     </Layout>
   )
