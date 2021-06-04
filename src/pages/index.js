@@ -6,10 +6,10 @@ import Services from "../components/Services"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
 import Skill from "../components/Skill"
-import Projects from "../components/Projects"
+import Projectsa from "../components/Projects"
 export default ({data}) => {
   const {
-    allStrapiJobs: { nodes: jops },
+    allStrapiProjects: { nodes: Projects },
     allStrapiBlogs: { nodes: blogs },
   } = data
   return <Layout>
@@ -17,7 +17,7 @@ export default ({data}) => {
     <Hero />
     {/* {<Services />} */}
     <Skill />
-    <Projects projects={jops} title="featured projects" showLink />
+    <Projectsa projects={Projects} title="featured projects" showLink />
     <Blogs showlink blogs={blogs} title="Blogs" />
      </Layout>
 }
@@ -25,7 +25,7 @@ export default ({data}) => {
 
 export const query = graphql`
   {
-    allStrapiJobs {
+    allStrapiProjects {
       nodes {
         github
         id

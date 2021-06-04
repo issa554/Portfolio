@@ -7,7 +7,7 @@ import Image from "gatsby-image"
 
 import SEO from "../components/SEO"
 const About = ({data:{allStrapiAbout:{nodes}}}) => {
-  const {title , info , image , stack} = nodes[0]
+  const {title , info , image } = nodes[0]
   return <Layout>
 <SEO title="About" description="this is a About page"/>
     <section className="about-page">
@@ -17,9 +17,7 @@ const About = ({data:{allStrapiAbout:{nodes}}}) => {
           <Title title={title} />
           <p>{info}</p>
           <div className="about-stack">
-            {stack.map((i)=>{
-              return <span key={i.id}>{i.title}</span>
-            })}
+        
           </div>
         </article>
       </div>
@@ -42,10 +40,7 @@ export const query = graphql`
           }
         }
         title
-        stack {
-          id
-          title
-        }
+        
       }
     }
   }

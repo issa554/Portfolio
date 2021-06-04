@@ -6,21 +6,21 @@ import SEO from "../components/SEO"
 
 const ProjectsPage = ({
   data: {
-    allStrapiJobs: { nodes: Jobs },
+    allStrapiProjects: { nodes: Projects },
   },
 }) => {
   return (
     <Layout>
       <SEO title="Projects" />
       <section className="projects-page">
-        <Projects projects={Jobs} title="all projects" />
+        <Projects projects={Projects} title="all projects" />
       </section>
     </Layout>
   )
 }
 export const query = graphql`
   {
-    allStrapiJobs {
+    allStrapiProjects {
       nodes {
         github
         id
